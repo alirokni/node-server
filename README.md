@@ -23,6 +23,7 @@ For above structure, runing server.js in dev or node directory will result in sh
 /Users/USERNAME/dev $ node server.js
 Server running at http://127.0.0.1:1337/
 </pre>
-Visiting <b>http://127.0.0.1:1337/dev/index.html</b> in a browser shows content of index.html and other assets. 
+Visiting <b>127.0.0.1:1337/dev/index.html</b> in a browser shows content of index.html and other assets. 
 
 If port 1337 is giving conflict or is in use, any other avaible port can be used.
+
