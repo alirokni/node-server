@@ -1,0 +1,10 @@
+{
+  "name": "node_server",
+  "version": "1.0.0",
+  "description": "simple Node.js server",
+  "author": "Ali Rokni",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
