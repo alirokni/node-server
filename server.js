@@ -1,16 +1,13 @@
-// server.js Simple node server to run 
-
+'use strict';
 var  sys = require('util'),
     http = require('http'),
       fs = require('fs'),
     path = require('path'),
 filePath = '',
 appServer = '';
-
-  appServer = http.createServer(function (request, response) {
-
+const PORT = 1337;
+appServer = http.createServer(function (request, response) {
   filePath = request.url.substring(1);  // To remove extra / in path 
-
   var fileExtName = path.extname(filePath),
       contentType = {
         'html': 'text/html',
@@ -23,7 +20,6 @@ appServer = '';
          'gif': 'image/gif'
       },
       contentType = contentType[fileExtName.substring(1)] || 'text/html';
-
       fs.access(filePath, function(error) {
         if (!error) {
           fs.readFile(filePath, function(error, data) {
@@ -51,7 +47,6 @@ appServer = '';
           return;
         }
       });
-    });
-
-appServer.listen(1337, "localhost");
-console.log('Server running at http://127.0.0.1:1337/');
+});
+appServer.listen(PORT, "localhost");
+console.log('Server running at http://127.0.0.1:' + PORT + '/');
