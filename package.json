@@ -1,5 +1,5 @@
 {
-  "name": "node_server",
+  "name": "HTTP_node_server",
   "version": "1.0.0",
   "description": "simple Node.js server",
   "author": "Ali Rokni",
