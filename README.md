@@ -1,7 +1,7 @@
 # node-server
 Simple HTTP node.js server is a standalone server to run any static web page.
 
-Once the node.js is insatlled, edit profile $PATH variable using export command to run node from any directory in terminal (e.g. export PATH="/Users/USER-NAME/node/bin:$PATH").
+Once the node.js is insatlled, edit profile $PATH variable using export command to run node from any directory in terminal (e.g. export PATH="/Users/USER-NAME/node/bin:$PATH"). In order to make life easier, setting profile $PATH can be done in .profile and sourced before running node app. To check availability of node, execute node -v to get the node version.  
 
 server.js can be installed in any directory  and webpage can have access to it. An example of directory which has node.js in a different directory than development server is showing in following:   
 <pre>
