@@ -7,22 +7,24 @@ filePath = '',
 appServer = '';
 const PORT = 1337;
 appServer = http.createServer(function (request, response) {
-  filePath = request.url.substring(1);  // To remove extra / in path 
+  var filePath = request.url;  // relative to its execution path
+  var readFilePath = /\?/.test(filePath) ? filePath.substring(1, filePath.indexOf('?') ) : filePath.substring(1);  // To remove extra
   var fileExtName = path.extname(filePath),
       contentType = {
         'html': 'text/html',
-          'js': 'text/javascript',
+          'js': 'application/javascript',
          'css': 'text/css',
-        'json': 'text/json',
+        'json': 'application/json',
          'png': 'image/png',
          'svg': 'image/svg+xml',
          'ico': 'image/x-icon',
-         'gif': 'image/gif'
+         'gif': 'image/gif',
+         'jpg': 'image/jpeg' 
       },
-      contentType = contentType[fileExtName.substring(1)] || 'text/html';
-      fs.access(filePath, function(error) {
+      contentType =  /callback=/.test(fileExtName) ? 'application/javascript' : contentType[fileExtName.substring(1)] || 'text/html';
+      fs.access(readFilePath, function(error) {
         if (!error) {
-          fs.readFile(filePath, function(error, data) {
+          fs.readFile(readFilePath, function(error, data) {
             if (error) {
               response.writeHead(500, {'Content-Type': 'text/plain;charset=utf-8'});
               response.write('500 - Interanl Service Error \n' + error );
