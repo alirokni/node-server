@@ -1,6 +1,5 @@
 'use strict';
-var  sys = require('util'),
-    http = require('http'),
+var http = require('http'),
       fs = require('fs'),
     path = require('path'),
 filePath = '',
