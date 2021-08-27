@@ -1,5 +1,5 @@
 # node-server
-Simple HTTP node.js server is a standalone server to run any static web page.
+Simple <a hrefr="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework">HTTP node.js server</a> is a standalone server to run any static web page. The code is dervied from https://nodejs.dev/learn/making-http-requests-with-nodejs and as example of it is at  https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework
 
 Once the node.js is insatlled, edit profile $PATH variable using export command to run node from any directory in terminal (e.g. export PATH="/Users/USER-NAME/node/bin:$PATH"). In order to make life easier, setting profile $PATH can be done in .profile and sourced before running node app. To check availability of node, execute node -v to get the node version.  
 
