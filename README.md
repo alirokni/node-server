@@ -5,17 +5,19 @@ Once the node.js is insatlled, edit profile $PATH variable using export command 
 
 server.js can be installed in any directory  and webpage can have access to it. An example of directory which has node.js in a different directory than development server is showing in following:   
 <pre>
-- server.js
 - node
-- ...
-- dev
- -- index.html
-  --- js
-   ---- global.js
-  --- style
-   ---- global.css
-  --- images
-   ---- logo.png
+- server
+ -- server.js
+ -- package.json
+ -- ...
+ -- dev
+ --- index.html
+  ---- js
+   ----- global.js
+  ---- style
+   ----- global.css
+  ---- images
+   ----- logo.png
 </pre>
 
 For above structure, runing server.js in parent directory of dev and node directory will result in showing following in terminal 
