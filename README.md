@@ -23,7 +23,7 @@ server.js can be installed in any directory  and webpage can have access to it. 
 For above structure, runing server.js in parent directory of dev and node directory will result in showing following in terminal 
 
 <pre>
-/Users/USERNAME/dev $ node server.js
+/Users/USERNAME/dev $ npm run start or npm run debug
 Server running at http://127.0.0.1:1337/
 </pre>
 Visiting <b>127.0.0.1:1337/dev/index.html</b> in a browser shows content of index.html and other assets. 
